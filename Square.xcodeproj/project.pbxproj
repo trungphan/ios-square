@@ -24,6 +24,7 @@
 		87A9199216A0B3EB005F483F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A9196A16A0B3EB005F483F /* Foundation.framework */; };
 		87A9199A16A0B3EB005F483F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87A9199816A0B3EB005F483F /* InfoPlist.strings */; };
 		87A9199D16A0B3EB005F483F /* SquareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A9199C16A0B3EB005F483F /* SquareTests.m */; };
+		87A919A816A0B403005F483F /* SquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A919A716A0B403005F483F /* SquareView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		87A9199916A0B3EB005F483F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87A9199B16A0B3EB005F483F /* SquareTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareTests.h; sourceTree = "<group>"; };
 		87A9199C16A0B3EB005F483F /* SquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareTests.m; sourceTree = "<group>"; };
+		87A919A616A0B403005F483F /* SquareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareView.h; sourceTree = "<group>"; };
+		87A919A716A0B403005F483F /* SquareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				87A9198616A0B3EB005F483F /* SquareViewController.h */,
 				87A9198716A0B3EB005F483F /* SquareViewController.m */,
 				87A9196F16A0B3EB005F483F /* Supporting Files */,
+				87A919A616A0B403005F483F /* SquareView.h */,
+				87A919A716A0B403005F483F /* SquareView.m */,
 			);
 			path = Square;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				87A9197516A0B3EB005F483F /* main.m in Sources */,
 				87A9197916A0B3EB005F483F /* SquareAppDelegate.m in Sources */,
 				87A9198816A0B3EB005F483F /* SquareViewController.m in Sources */,
+				87A919A816A0B403005F483F /* SquareView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

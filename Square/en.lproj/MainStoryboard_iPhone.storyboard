@@ -1,23 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Square View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="SquareViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                    <view key="view" contentMode="scaleToFill" id="3" customClass="SquareView">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Tab-wk-BiS" appends="YES" id="YJp-o8-juN"/>
+                            <outletCollection property="gestureRecognizers" destination="3dw-ei-ZFf" appends="YES" id="0yx-cv-xkE"/>
+                            <outletCollection property="gestureRecognizers" destination="Fsh-4j-oWC" appends="YES" id="bCg-TI-vEj"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="Tab-wk-BiS">
+                    <connections>
+                        <action selector="handleRotationGesture:" destination="3" id="gbj-Kr-o4b"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="3dw-ei-ZFf">
+                    <connections>
+                        <action selector="handlePinchGesture:" destination="3" id="wPn-cT-2YC"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="Fsh-4j-oWC"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="SquareView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareView.h"/>
+            <relationships>
+                <relationship kind="action" name="handlePinchGesture:" candidateClass="UIPinchGestureRecognizer"/>
+                <relationship kind="action" name="handleRotationGesture:" candidateClass="UIRotationGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="SquareViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SquareViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
